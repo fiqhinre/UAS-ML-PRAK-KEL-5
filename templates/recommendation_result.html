@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECOMMENDATION</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="logo-header">
+                <img src="{{url_for('static', filename='images/cdfilms.png')}}">
+            </div>
+            <div class="menu-header">
+                <a href="/" style="text-decoration: none;">
+                <div class="menu-null">
+                    HOME
+                </div>
+                </a>
+                <a href="/#about" style="text-decoration: none;">
+                <div class="menu-null">
+                    ABOUT
+                </div>
+                </a>
+                <a href="/#movies" style="text-decoration: none;">
+                <div class="menu-null">
+                    MOVIES
+                </div>
+                </a>
+                <div class="menu">
+                    RECOMMENDATION
+                </div>
+            </div>
+        </div>
+        <div class="home">
+            <div class="judul-section" style="margin-left: 0px;">
+                FOR YOUR RECOMMENDATION
+            </div>
+            <div class="text-light-32" style="width: 1180px; margin-left: 50px;">
+                Based on the title and rating of the movie you provided, we would recommend you to watch this. We hope you enjoy the movies as well!
+            </div>
+            <div class="content-res-container">
+                <div class="res-container">
+                    <div class="text-bold-78" style="font-size: 40px; margin-left: 45px;">
+                        1. {{ similar_movies[0] }} <br>
+                        2. {{ similar_movies[1] }} <br>
+                        3. {{ similar_movies[2] }} <br>
+                        4. {{ similar_movies[3] }} <br>
+                        5. {{ similar_movies[4] }}
+                    </div>
+                </div>
+                <div class="poster-res-container">
+                    <div class="poster" style="margin-top: 100px;">
+                        <img src="{{url_for('static', filename='images/crossroads.png')}}">
+                    </div>
+                    <div class="poster" style="margin-left: 20px;">
+                        <img src="{{url_for('static', filename='images/gross-anatomy.png')}}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-section">
+
+        </div>
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="{{url_for('static', filename='images/logo-footer.png')}}">
+            </div>
+            <div class="text-med-32" style="font-size: 25px; text-align: center; width: 689px;">
+                CDFilm provides movie recommendations that are just right for you. Experience something different.
+            </div>
+            <div class="sosmed-logo-container">
+                <div class="sosmed-footer">
+                    <img src="{{url_for('static', filename='images/instagram.png')}}">
+                </div>
+                <div class="sosmed-footer">
+                    <img src="{{url_for('static', filename='images/facebook.png')}}">
+                </div>
+                <div class="sosmed-footer">
+                    <img src="{{url_for('static', filename='images/call.png')}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
